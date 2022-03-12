@@ -1,0 +1,42 @@
+using System;
+
+namespace hata
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+
+            try
+            {
+             Console.WriteLine("Bir sayı giriniz : ");
+             int sayı = Convert.ToInt32(Console.ReadLine());
+             Console.WriteLine("senin sayın : " + sayı);
+            }
+            catch(Exception ex)
+            {
+              Console.WriteLine("Hata  : "+ ex.Message.ToString());
+
+
+            }
+            finally
+            {
+                Console.WriteLine("işlem tamamlandı...");
+            }
+
+            try
+            {
+                int a = int.Parse(null);
+            }
+            catch (ArgumentNullException ex)
+            {
+                
+                Console.WriteLine("boş değer giridniz!!!!");
+            }
+
+              Console.ReadKey();
+
+        }
+    }
+}
